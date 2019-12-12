@@ -1,18 +1,8 @@
 const resolvers = {
   Query: {
-    books: () => books
+    launches: (_, __, { dataSources }) => dataSources.launchAPI.getAllLaunches(),
+    launch: (_, { id }, { dataSources }) => dataSources.launchAPI.getLaunchById({ launchId: id })
   }
 };
-
-const books = [
-  {
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling'
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton'
-  }
-];
 
 module.exports = resolvers;
