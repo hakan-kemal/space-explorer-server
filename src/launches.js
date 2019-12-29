@@ -11,14 +11,11 @@ class LaunchAPI extends RESTDataSource {
       id: launch.flight_number || 0,
       upcoming: launch.upcoming,
       date: launch.launch_date_unix,
-      // cursor: `${launch.launch_date_unix}`,
       site: launch.launch_site && launch.launch_site.site_name,
       mission: {
         name: launch.mission_name,
         details: launch.details,
         patch: launch.links.mission_patch_small
-        // missionPatchSmall: launch.links.mission_patch_small,
-        // missionPatchLarge: launch.links.mission_patch
       },
       rocket: {
         id: launch.rocket.rocket_id,

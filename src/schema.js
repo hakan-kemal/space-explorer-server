@@ -13,20 +13,13 @@ const typeDefs = gql`
     site: String
     mission: Mission
     rocket: Rocket
-    # isBooked: Boolean!
   }
 
   type Mission {
     name: String
     details: String
     patch: String
-    # missionPatch(size: PatchSize): String
   }
-
-  # enum PatchSize {
-  #   SMALL
-  #   LARGE
-  # }
 
   type Rocket {
     id: ID!
