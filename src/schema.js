@@ -8,22 +8,25 @@ const typeDefs = gql`
 
   type Launch {
     id: ID!
+    upcoming: String
+    date: Int
     site: String
     mission: Mission
     rocket: Rocket
-    isBooked: Boolean!
+    # isBooked: Boolean!
   }
 
   type Mission {
     name: String
-    # missionPatch: String;
-    missionPatch(size: PatchSize): String
+    details: String
+    patch: String
+    # missionPatch(size: PatchSize): String
   }
 
-  enum PatchSize {
-    SMALL
-    LARGE
-  }
+  # enum PatchSize {
+  #   SMALL
+  #   LARGE
+  # }
 
   type Rocket {
     id: ID!
