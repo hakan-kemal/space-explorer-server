@@ -8,7 +8,7 @@ const typeDefs = gql`
 
   type Launch {
     id: ID!
-    upcoming: String
+    upcoming: Boolean
     date: Int
     site: String
     mission: Mission
